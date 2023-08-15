@@ -14,7 +14,7 @@ class BarangSeeder extends Seeder
     public function run(): void
     {
         Barang::create([
-            'plat_mobil' => 'UDX',
+            'plat_mobil' => 'D 15 UDX',
             'jenis_kendaraan' => 'Mobil',
             'merek' => 'Honda',
             'model' => 'Sedan',

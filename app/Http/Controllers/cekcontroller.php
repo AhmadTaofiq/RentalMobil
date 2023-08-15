@@ -24,12 +24,15 @@ class cekcontroller extends Controller
     }
     public function create()
     {
-        return view('check.create');
+        return view('check.create')->with([
+            'user' => User::all(),
+            'barang' => Barang::all()
+        ]);
     }
     public function store(Request $request)
     {
         $request->validate([
-            'nik_user' => 'required|min:8',
+            'nik_user' => 'required',
             'plat_mobil' => 'required',
             'tgl_peminjaman' => 'required',
             'tgl_pengembalian' => 'required',

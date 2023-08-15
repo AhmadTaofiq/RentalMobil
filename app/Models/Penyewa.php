@@ -21,10 +21,14 @@ class Penyewa extends Model
     ];
 
     use HasFactory;
-
+    public function barang()
+    {
+        return $this->belongsTo(Barang::class, 'plat_mobil', 'id');
+    }
     public function user()
     {
         return $this->belongsTo(User::class, 'nik_user', 'id');
     }
+
 
 }

@@ -19,8 +19,8 @@
                 @if ($penyewa->count() > 0)
                     @foreach ($penyewa as $no => $hasil)
                         <th>{{ $no + 1 }}</th>
-                        <td>{{ $hasil->nik_user }}</td>
-                        <td>{{ $hasil->plat_mobil }}</td>
+                        <td>{{ $hasil->user?->nik_user }}</td>
+                        <td>{{ $hasil->barang?->plat_mobil }}</td>
                         <td>{{ $hasil->tgl_peminjaman }}</td>
                         <td>{{ $hasil->tgl_pengembalian }}</td>
                         <td>{{ $hasil->total_hari }}</td>
